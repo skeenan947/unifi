@@ -17,8 +17,8 @@ services:
     restart: always
     volumes:
       - ./data:/unifi/data
-      - log:/unifi/log
-      - cert:/unifi/cert
+      - ./log:/unifi/log
+      - ./cert:/unifi/cert
       - init:/unifi/init.d
     environment:
       DB_URI: mongodb://mongo/unifi
